@@ -1,0 +1,20 @@
+
+[project]
+name = "cdda_downloader"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "alluofuyo", email = "alluofuyo@gmail.com"},
+]
+dependencies = [
+    "requests>=2.31.0",
+    "httpx>=0.24.1",
+    "colorama>=0.4.6",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
