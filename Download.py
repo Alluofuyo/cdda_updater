@@ -54,18 +54,16 @@ def construct_search_str():
     elif platform == "darwin":
         platform = "osx"
     search_str = f"cdda-{platform}-"
-    if config.TERMINAL_CHAR == "tiles":
-        search_str += "tiles"
+    if config.USE_TERMINAL:
+        search_str += "terminal-only-"
     else:
-        search_str += "curses"
+        search_str += "with-graphics-"
     if config.ENABLE_SOUNDS:
-        search_str += "-sounds"
+        search_str += "and-sounds-"
     if is_64bits and not platform == "osx":
-        search_str += "-x64"
+        search_str += "x64"
     elif platform == "osx":
         search_str += "universal"
-    if config.USE_MSVC:
-        search_str += "-msvc"
     return search_str
 
 
@@ -89,6 +87,7 @@ def download(url, file_name):
                 print(
                     f"downloaded: {downloaded / 1024 / 1024:.2f} MB / {total_length / 1024 / 1024:.2f} MB",
                     end='')
+        print()
         success(f"download {file_name} finished!")
     finally:
         req.close()

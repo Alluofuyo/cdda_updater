@@ -7,8 +7,9 @@ HTTPS_PROXY = "http://127.0.0.1:10809"
 ENABLE_SOUNDS = True
 
 # Linux and OSX
-TERMINAL_CHAR = "tiles"  # curses or tiles
+# TERMINAL_CHAR = "tiles"  # curses or tiles
+USE_TERMINAL = False
 # Windows
-USE_MSVC = True
+# USE_MSVC = True
 
 CHECK_UPDATES = True
