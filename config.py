@@ -3,8 +3,8 @@ import os
 OWNER = "CleverRaven"
 REPO = "Cataclysm-DDA"
 USE_PROXY = True
-HTTP_PROXY = "http://127.0.0.1:10809"
-HTTPS_PROXY = "http://127.0.0.1:10809"
+HTTP_PROXY = "http://127.0.0.1:10808"
+HTTPS_PROXY = "http://127.0.0.1:10808"
 
 ENABLE_SOUNDS = True
 
