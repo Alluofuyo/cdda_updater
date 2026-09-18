@@ -121,14 +121,16 @@ def construct_search_str():
     elif platform == "linux":
         platform = "linux"
     search_str = f"cdda-{platform}-"
-    if config.TERMINAL_CHAR == "graphics":
-        search_str += "with-graphics"
+    if config.USE_TERMINAL:
+        search_str += "terminal-only-"
     else:
-        search_str += "terminal-only"
+        search_str += "with-graphics-"
     if config.ENABLE_SOUNDS:
-        search_str += "-and-sounds"
-    if is_64bits:
-        search_str += "-x64"
+        search_str += "and-sounds-"
+    if is_64bits and not platform == "osx":
+        search_str += "x64"
+    elif platform == "osx":
+        search_str += "universal"
     return search_str
 
 

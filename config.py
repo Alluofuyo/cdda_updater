@@ -9,7 +9,7 @@ HTTPS_PROXY = "http://127.0.0.1:10808"
 ENABLE_SOUNDS = True
 
 # Linux and OSX
-TERMINAL_CHAR = "graphics"  # curses or tiles
+USE_TERMINAL = False
 
 CHECK_UPDATES = True
 
