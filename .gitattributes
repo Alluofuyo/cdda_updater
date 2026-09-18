@@ -1,0 +1,2 @@
+# Normalize line endings to LF in the repository to avoid CRLF/LF churn.
+* text=auto
